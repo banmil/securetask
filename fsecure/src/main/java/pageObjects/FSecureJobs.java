@@ -9,12 +9,11 @@ public class FSecureJobs {
 	public WebDriver driver;
 
 	By city=By.id("job-city");
-	By applying=By.cssSelector("a[href='#apply']");
+	By technicalSMJob=By.xpath("//a[contains(@href, 'https://emp.jobylon.com/jobs/35989-f-secure-technical-service-manager/')]");
 	
 	public FSecureJobs(WebDriver driver) {
 		
 		this.driver=driver;
-
 	}
 
 
@@ -22,9 +21,8 @@ public class FSecureJobs {
 		return driver.findElement(city);
 	}
 	
-	public WebElement applying() {
-		return driver.findElement(applying);
+	public WebElement technicalSMJob() {
+		return driver.findElement(technicalSMJob);
 	}
-	
 	
 }
