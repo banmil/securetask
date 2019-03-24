@@ -15,6 +15,7 @@ public class Base {
 	
 public WebDriver driver;
 public Properties prop;
+static String projectPath = System.getProperty("user.dir");
 	
 public WebDriver initializeDriver() throws IOException {
 	
@@ -25,12 +26,12 @@ public WebDriver initializeDriver() throws IOException {
 	String browserName=prop.getProperty("browser");
 	
 	if(browserName.equals("chrome")) {
-		System.setProperty("webdriver.chrome.driver","C:\\Users\\Paulina\\git\\securetask\\fsecure\\drivers\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver",projectPath+"\\drivers\\chromedriver.exe");
 		driver=new ChromeDriver();
 	}
 	
 	else if(browserName.equals("firefox")) {
-		System.setProperty("webdriver.gecko.driver","C:\\Users\\Paulina\\git\\securetask\\fsecure\\drivers\\geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver",projectPath+"\\drivers\\geckodriver.exe");
 		driver=new FirefoxDriver();	
 	}
 	
