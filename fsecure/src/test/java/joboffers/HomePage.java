@@ -10,6 +10,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import pageObjects.FSecureJobs;
+import pageObjects.TSMOffer;
 import resources.Base;
 
 public class HomePage extends Base {
@@ -42,6 +43,15 @@ public class HomePage extends Base {
 		System.out.println(driver.getTitle());
 		Assert.assertEquals(driver.getTitle(), "Technical Service Manager - F-Secure | Jobylon");
 		
+		TSMOffer tsmo=new TSMOffer(driver);
+		
+		System.out.println(tsmo.jobtitle().getText());
+		if(tsmo.jobtitle().getText().equals(prop.getProperty("title"))) {
+			System.out.println("The job title is displayed");
+		}
+		else {
+			System.out.println("Test failed");
+		}
 	}
 
 }

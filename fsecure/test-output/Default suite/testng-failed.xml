@@ -6,6 +6,7 @@
       <class name="joboffers.HomePage">
         <methods>
           <include name="pageNavigation"/>
+          <include name="startBroweser"/>
         </methods>
       </class> <!-- joboffers.HomePage -->
     </classes>

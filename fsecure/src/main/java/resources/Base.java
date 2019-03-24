@@ -10,7 +10,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 
-
 public class Base {
 	
 public WebDriver driver;
@@ -23,8 +22,6 @@ public WebDriver initializeDriver() throws IOException {
 	FileInputStream filepath=new FileInputStream(projectPath+"\\src\\main\\java\\resources\\data.properties");
 	
 	prop.load(filepath); 
-
-	String expectedTitle=prop.getProperty("expectedTitle");
 
 	String browserName=prop.getProperty("browser");
 	
