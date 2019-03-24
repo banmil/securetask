@@ -1,7 +1,6 @@
 package resources;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
@@ -26,12 +25,12 @@ public WebDriver initializeDriver() throws IOException {
 	String browserName=prop.getProperty("browser");
 	
 	if(browserName.equals("chrome")) {
-		System.setProperty("webdriver.chrome.driver","D:\\webdriver chrome\\NEW\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\Paulina\\git\\securetask\\fsecure\\drivers\\chromedriver.exe");
 		driver=new ChromeDriver();
 	}
 	
 	else if(browserName.equals("firefox")) {
-		System.setProperty("webdriver.gecko.driver","D:\\geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver","C:\\Users\\Paulina\\git\\securetask\\fsecure\\drivers\\geckodriver.exe");
 		driver=new FirefoxDriver();	
 	}
 	
