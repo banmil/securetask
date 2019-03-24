@@ -21,7 +21,7 @@ public WebDriver initializeDriver() throws IOException {
 	Properties prop=new Properties();
 	FileInputStream filepath=new FileInputStream("D:\\com.fsecure.com\\fsecure\\src\\main\\java\\resources\\data.properties");
 	
-	prop.load(filepath);
+	prop.load(filepath); 
 	String browserName=prop.getProperty("browser");
 	
 	if(browserName.equals("chrome")) {
