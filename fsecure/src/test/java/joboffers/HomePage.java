@@ -25,13 +25,11 @@ public class HomePage extends Base {
 
 	public void pageNavigation() throws IOException {
 		
-		System.out.println(driver.getTitle());
-		//String actualParentTitle=driver.getTitle();
-		
+		System.out.println(driver.getTitle());		
 		Assert.assertEquals(driver.getTitle(), "Job openings | F-Secure");
 		
-		FSecureJobs fsj = new FSecureJobs(driver);
-		Select city = new Select(fsj.citySelector());
+		FSecureJobs fsj=new FSecureJobs(driver);
+		Select city=new Select(fsj.citySelector());
 		city.selectByValue("Poznań");
 		fsj.technicalSMJob().click();
 		
