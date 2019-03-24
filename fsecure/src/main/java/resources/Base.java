@@ -20,9 +20,12 @@ static String projectPath = System.getProperty("user.dir");
 public WebDriver initializeDriver() throws IOException {
 	
 	Properties prop=new Properties();
-	FileInputStream filepath=new FileInputStream("D:\\com.fsecure.com\\fsecure\\src\\main\\java\\resources\\data.properties");
+	FileInputStream filepath=new FileInputStream(projectPath+"\\src\\main\\java\\resources\\data.properties");
 	
 	prop.load(filepath); 
+
+	String expectedTitle=prop.getProperty("expectedTitle");
+
 	String browserName=prop.getProperty("browser");
 	
 	if(browserName.equals("chrome")) {
@@ -38,6 +41,7 @@ public WebDriver initializeDriver() throws IOException {
 	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	driver.manage().window().maximize();
 	return driver;
+	
 }
 
 }
